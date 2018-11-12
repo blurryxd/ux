@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul class="fruits">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li data-foodtype="squishy">Orange</li>
+    <li>Pear</li>
+    <li>Kiwi</li>
+    <li id="berry">Strawberry</li>
+</ul>
+
+<script>
+  /*tehtävä 1 */
+  console.log(document.getElementById('berry'));
+  console.log(document.getElementById('berry').innerHTML);
+  document.getElementById('berry').style.backgroundColor = 'red';
+
+  /*tehtävä 2 */
+  document.querySelector('li[data-foodtype]').style.backgroundColor = 'orange';
+
+  /* tehtävä 3 */
+  console.log(document.getElementsByTagName('li'));
+  const listalol = document.getElementsByTagName('li');
+
+  for (let i = 0; i < listalol.length; i++) {
+    listalol[i].style.listStyle = 'none';
+    listalol[i].style.width = '100px';
+    if (i === 3) {
+      listalol[i].style.backgroundColor = 'green';
+    }
+  }
+
+  /*tehtävä 4*/
+  console.log(document.querySelectorAll('li'));
+  const listajuttu = document.querySelectorAll('li');
+
+  listajuttu.forEach(function(element) {
+    console.log(element);
+    element.style.borderStyle = 'solid';
+  });
+
+</script>
+
+</body>
+</html>
